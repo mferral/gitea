@@ -1,0 +1,9 @@
+#!/bin/bash
+RUTA=/repos/
+RUTA_GIT=/data/git/repositories/mferral/
+APP=test-repo
+mkdir -p $RUTA$APP
+cd $RUTA$APP
+git --work-tree=$RUTA$APP --git-dir=$RUTA_GIT$APP.git checkout -f
+
+./script.sh

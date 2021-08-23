@@ -1,0 +1,8 @@
+apk update && apk add --no-cache docker-cli
+apk add --no-cache docker-compose
+
+chmod 777 /var/run/docker.sock
+
+docker exec -it gitea chmod 777 /var/run/docker.sock
+
+docker-compose run --rm server chmod 777 /var/run/docker.sock
